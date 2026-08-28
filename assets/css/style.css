@@ -79,6 +79,10 @@ a { color: inherit; text-decoration: none; }
 /* ===== CTA band ===== */
 .cta-band { background: linear-gradient(120deg, var(--accent), var(--accent-dark)); color: var(--white); border-radius: var(--radius); padding: 44px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .cta-band h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; }
+.cta-band-center { flex-direction: column; text-align: center; justify-content: center; }
+
+/* ===== Muted note text ===== */
+.note-muted { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 28px; }
 
 /* ===== Products ===== */
 .product-card { text-align: left; }
@@ -110,7 +114,10 @@ a { color: inherit; text-decoration: none; }
 /* ===== Footer ===== */
 .site-footer { background: var(--navy); color: rgba(255,255,255,.8); padding: 54px 0 24px; }
 .site-footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 34px; }
-.site-footer h4 { color: var(--white); margin-bottom: 12px; }
+.site-footer h3 { color: var(--white); margin-bottom: 12px; font-size: 1rem; }
+
+/* ===== Accessibility utility ===== */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .site-footer a:hover { color: var(--accent); }
 .site-footer .copy { border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; text-align: center; font-size: .85rem; }
 
