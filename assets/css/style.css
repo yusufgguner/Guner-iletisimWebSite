@@ -326,6 +326,17 @@ a.card:hover .card-more .ico { transform: translateX(4px); }
   display: grid; place-items: center; color: var(--text-2);
 }
 .product-card .thumb .ico { width: 52px; height: 52px; stroke-width: 1.5; }
+.thumb { position: relative; }
+.thumb .dev { height: 124px; width: auto; }
+.thumb .dev-laptop { height: 94px; }
+.thumb-note {
+  position: absolute; bottom: 8px; right: 8px;
+  font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  font-family: var(--font-head);
+  padding: 3px 9px; border-radius: 999px;
+  background: rgba(11, 18, 32, .78); color: var(--muted);
+  border: 1px solid var(--border);
+}
 .price { font-family: var(--font-head); font-size: 1.45rem; font-weight: 800; color: var(--text); }
 .price small { font-size: .78rem; color: var(--muted); font-weight: 600; display: block; }
 .filters { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 38px; }
