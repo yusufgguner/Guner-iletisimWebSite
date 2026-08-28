@@ -5,12 +5,17 @@ window.GI = (function () {
     return "https://wa.me/" + PHONE + (message ? "?text=" + encodeURIComponent(message) : "");
   }
 
-  // Wizard: on button click, read fields via buildMessageFn and open WhatsApp
+  // Wizard: on form submit, read fields via buildMessageFn and open WhatsApp.
+  // Buttons are type="submit" so a click or Enter-key submission both fire this.
   function bindWizard(formId, buttonId, buildMessageFn) {
     var form = document.getElementById(formId);
-    var btn = document.getElementById(buttonId);
-    if (!form || !btn) return;
-    btn.addEventListener("click", function (e) {
+    if (!form) {
+      // Fallback: if the form lookup fails, try to bind via the button's form.
+      var btn = document.getElementById(buttonId);
+      form = btn && btn.form;
+    }
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
       var msg = buildMessageFn(form);
       if (!msg) return;
@@ -19,22 +24,28 @@ window.GI = (function () {
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     // Mobile nav
     var toggle = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".nav");
     if (toggle && nav) {
-      toggle.addEventListener("click", function () { nav.classList.toggle("open"); });
+      toggle.addEventListener("click", function () {
+        var isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
     }
 
-    // Animated counters: <b data-count="5000">0</b>
+    // Animated counters: <b data-count="5000">5.000+</b>
     var counters = document.querySelectorAll("[data-count]");
-    if ("IntersectionObserver" in window && counters.length) {
+    if (!prefersReducedMotion && "IntersectionObserver" in window && counters.length) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           var el = entry.target;
           io.unobserve(el);
           var target = parseInt(el.getAttribute("data-count"), 10);
+          el.textContent = "0";
           var start = null;
           function tick(ts) {
             if (!start) start = ts;
@@ -56,8 +67,12 @@ window.GI = (function () {
     var filterBtns = document.querySelectorAll("[data-filter]");
     filterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        filterBtns.forEach(function (b) { b.classList.remove("active"); });
+        filterBtns.forEach(function (b) {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
         btn.classList.add("active");
+        btn.setAttribute("aria-pressed", "true");
         var f = btn.getAttribute("data-filter");
         document.querySelectorAll("[data-cat]").forEach(function (card) {
           card.style.display = (f === "all" || card.getAttribute("data-cat") === f) ? "" : "none";
