@@ -10,7 +10,7 @@
   <meta property="og:type" content="business.business">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E📱%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/main.js"></script>
   <script type="application/ld+json">
@@ -37,48 +37,99 @@
   </script>
 </head>
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" x2="12" y1="2" y2="12"/></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11.5 11 13.5 15 9.5"/></symbol>
+    <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
+    <symbol id="i-sim" viewBox="0 0 24 24"><rect width="22" height="16" x="1" y="4" rx="2" ry="2"/><line x1="1" x2="23" y1="10" y2="10"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><path d="M2 20h.01"/><path d="M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-call" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect width="20" height="5" x="2" y="7"/><line x1="12" x2="12" y1="22" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  </svg>
+
   <header class="site-header">
     <div class="container">
-      <a class="logo" href="index.html">Güner <span>İletişim</span></a>
-      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+      <a class="logo" href="index.html" aria-label="Güner İletişim ana sayfa">
+        <span class="logo-mark"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+        <span class="logo-text">Güner İletişim<span>Teknik Servis · Avcılar</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
       <nav class="nav">
         <a href="teknik-servis.html">Teknik Servis</a>
         <a href="takas.html">Takas</a>
         <a href="urunler.html">Ürünler</a>
         <a href="index.html#iletisim">İletişim</a>
-        <a class="btn btn-primary" href="tel:+905377881563">📞 Hemen Ara</a>
+        <a class="btn btn-primary btn-sm" href="tel:+905377881563"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-call"/></svg> Hemen Ara</a>
       </nav>
     </div>
   </header>
 
   <div class="marquee">
     <div class="marquee-inner">
-      <span>🔥 Eskini Getir Yenisini Götür</span>
-      <span>⚡ Aynı Gün Ekran Değişimi</span>
-      <span>✅ Garantili Onarım</span>
-      <span>📱 2.El Cihazlarda Fırsat Fiyatlar</span>
-      <span>💳 Yerinde Ücretsiz Arıza Tespiti</span>
-      <span>🔥 Eskini Getir Yenisini Götür</span>
-      <span>⚡ Aynı Gün Ekran Değişimi</span>
-      <span>✅ Garantili Onarım</span>
-      <span>📱 2.El Cihazlarda Fırsat Fiyatlar</span>
-      <span>💳 Yerinde Ücretsiz Arıza Tespiti</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg> Eskini Getir Yenisini Götür</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg> Aynı Gün Ekran Değişimi</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> Garantili Onarım</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> 2.El Cihazlarda Fırsat Fiyatlar</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg> Yerinde Ücretsiz Arıza Tespiti</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg> Eskini Getir Yenisini Götür</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg> Aynı Gün Ekran Değişimi</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> Garantili Onarım</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> 2.El Cihazlarda Fırsat Fiyatlar</span>
+      <span><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg> Yerinde Ücretsiz Arıza Tespiti</span>
     </div>
   </div>
 
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Avcılar'ın <span>Telefon ve Teknik Servis</span> Merkezi</h1>
-        <p>Ekran değişimi, pil, şarj portu, su hasarı onarımı; sıfır ve 2.el cihaz alım-satım, takas. Uygun fiyat, hızlı teslim, garantili işçilik.</p>
-        <div class="hero-actions">
-          <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">💬 WhatsApp'tan Yaz</a>
-          <a class="btn btn-call" href="tel:+905377881563">📞 0537 788 15 63</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Avcılar · Cihangir</p>
+          <h1>Avcılar'ın <span>Telefon ve Teknik Servis</span> Merkezi</h1>
+          <p>Ekran değişimi, pil, şarj portu, su hasarı onarımı; sıfır ve 2.el cihaz alım-satım, takas. Uygun fiyat, hızlı teslim, garantili işçilik.</p>
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Yaz</a>
+            <a class="btn btn-ghost" href="tel:+905377881563"><svg class="ico" aria-hidden="true"><use href="#i-call"/></svg> 0537 788 15 63</a>
+          </div>
+          <p class="hero-note"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Cihangir, Ormanlı Cd. No:46 — Avcılar/İstanbul</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone-mock">
+            <div class="phone-screen">
+              <span class="logo-mark"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            </div>
+          </div>
+          <div class="hero-chip hero-chip-1"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> Garantili Onarım</div>
+          <div class="hero-chip hero-chip-2"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg> Aynı Gün Teslim</div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section-tight">
       <div class="container">
         <div class="trust-bar">
           <div class="stat">
@@ -101,194 +152,244 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section">
       <div class="container">
-        <h2 class="section-title">Teknik Servis Hizmetlerimiz</h2>
-        <p class="section-sub">Telefon, tablet ve bilgisayarınızdaki her sorun için profesyonel çözüm.</p>
+        <div class="section-head">
+          <p class="eyebrow">Teknik Servis</p>
+          <h2 class="section-title">Teknik Servis Hizmetlerimiz</h2>
+          <p class="section-sub">Telefon, tablet ve bilgisayarınızdaki her sorun için profesyonel çözüm.</p>
+        </div>
         <div class="card-grid">
           <a class="card" href="teknik-servis.html#ekran">
-            <div class="icon" aria-hidden="true">📱</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
             <h3>Ekran Değişimi</h3>
             <p>Kırık, çatlak ekranlar orijinal kalitede parçalarla aynı gün değişir.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#pil">
-            <div class="icon" aria-hidden="true">🔋</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-battery"/></svg></span>
             <h3>Pil Değişimi</h3>
             <p>Hızlı biten, şişen pilleri orijinal muadil pillerle güvenle yeniliyoruz.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#sarj">
-            <div class="icon" aria-hidden="true">🔌</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></span>
             <h3>Şarj Portu Onarımı</h3>
             <p>Şarj almayan, gevşeyen şarj soketlerini uzman ekibimiz onarır.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#ses">
-            <div class="icon" aria-hidden="true">🔊</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-volume"/></svg></span>
             <h3>Mikrofon / Hoparlör</h3>
             <p>Ses gelmemesi, karşı tarafın duymaması gibi sorunları gideriyoruz.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#guc">
-            <div class="icon" aria-hidden="true">⚡</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-power"/></svg></span>
             <h3>Güç Düğmesi Onarımı</h3>
             <p>Açılmayan, kilitlenmeyen cihazlarınızda güç düğmesi tamiri yapılır.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#su">
-            <div class="icon" aria-hidden="true">💧</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-droplet"/></svg></span>
             <h3>Su Hasarı Onarımı</h3>
             <p>Suya düşen cihazlara acil müdahale ile veri ve donanım kurtarma.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#yazilim">
-            <div class="icon" aria-hidden="true">🛠️</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
             <h3>Yazılım Sorunları</h3>
             <p>Donma, yavaşlama, güncelleme ve virüs sorunlarına yazılımsal çözüm.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#tablet">
-            <div class="icon" aria-hidden="true">📲</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-tablet"/></svg></span>
             <h3>Tablet Onarımı</h3>
             <p>Tüm marka tabletlerde ekran, pil ve donanım onarımı yapıyoruz.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
           <a class="card" href="teknik-servis.html#tarama">
-            <div class="icon" aria-hidden="true">🔍</div>
+            <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></span>
             <h3>Ücretsiz Arıza Tarama</h3>
             <p>Cihazınızı ücretsiz test ediyor, arızayı netleştirip fiyat veriyoruz.</p>
+            <span class="card-more">İncele <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section-tight">
       <div class="container">
         <div class="cta-band">
           <div>
             <h2>Eskini Getir, Yenisini Götür!</h2>
             <p>Eski telefonun ne durumda olursa olsun değerinde alalım, yenisine sayalım.</p>
           </div>
-          <a class="btn btn-call" href="takas.html">Takas Teklifi Al →</a>
+          <a class="btn btn-light" href="takas.html">Takas Teklifi Al <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Öne Çıkan Cihazlar</h2>
-        <p class="section-sub">Özenle seçilmiş sıfır ve 2.el cihazlarda kaçırılmayacak fırsatlar.</p>
+        <div class="section-head">
+          <p class="eyebrow">Vitrin</p>
+          <h2 class="section-title">Öne Çıkan Cihazlar</h2>
+          <p class="section-sub">Özenle seçilmiş sıfır ve 2.el cihazlarda kaçırılmayacak fırsatlar.</p>
+        </div>
         <div class="card-grid">
           <div class="card product-card">
-            <div class="thumb" aria-hidden="true">📱</div>
+            <div class="thumb" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
             <span class="badge tag-ikinciel">2.El Temiz</span>
             <h3>iPhone 13 128 GB</h3>
             <p class="price">28.500 ₺</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20iPhone%2013%20128%20GB%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20iPhone%2013%20128%20GB%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card product-card">
-            <div class="thumb" aria-hidden="true">📱</div>
+            <div class="thumb" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
             <span class="badge tag-sifir">Sıfır</span>
             <h3>Samsung Galaxy S23</h3>
             <p class="price">34.900 ₺</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20Samsung%20Galaxy%20S23%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20Samsung%20Galaxy%20S23%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card product-card">
-            <div class="thumb" aria-hidden="true">📱</div>
+            <div class="thumb" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
             <span class="badge tag-ikinciel">2.El Temiz</span>
             <h3>iPhone 12 64 GB</h3>
             <p class="price">21.000 ₺</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20iPhone%2012%2064%20GB%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20iPhone%2012%2064%20GB%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card product-card">
-            <div class="thumb" aria-hidden="true">📱</div>
+            <div class="thumb" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
             <span class="badge tag-sifir">Sıfır</span>
             <h3>Samsung Galaxy A54</h3>
             <p class="price">16.900 ₺</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20Samsung%20Galaxy%20A54%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20Samsung%20Galaxy%20A54%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card product-card">
-            <div class="thumb" aria-hidden="true">📱</div>
+            <div class="thumb" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
             <span class="badge tag-sifir">Sıfır</span>
             <h3>Xiaomi Redmi Note 13</h3>
             <p class="price">11.900 ₺</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20Xiaomi%20Redmi%20Note%2013%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20Xiaomi%20Redmi%20Note%2013%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card product-card">
-            <div class="thumb" aria-hidden="true">📱</div>
+            <div class="thumb" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
             <span class="badge tag-ikinciel">2.El Temiz</span>
             <h3>iPhone 11 128 GB</h3>
             <p class="price">17.500 ₺</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20iPhone%2011%20128%20GB%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20iPhone%2011%20128%20GB%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
         </div>
-        <p style="text-align:center; margin-top: 36px;">
-          <a class="btn btn-primary" href="urunler.html">Tüm Ürünleri Gör</a>
+        <p style="text-align:center; margin-top: 40px;">
+          <a class="btn btn-primary" href="urunler.html">Tüm Ürünleri Gör <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </p>
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section section-panel">
       <div class="container">
-        <h2 class="section-title">SIM ve Diğer Hizmetler</h2>
-        <p class="section-sub">Cihazınız dışında ihtiyaç duyduğunuz tüm hizmetler tek adreste.</p>
+        <div class="section-head">
+          <p class="eyebrow">Ek Hizmetler</p>
+          <h2 class="section-title">SIM ve Diğer Hizmetler</h2>
+          <p class="section-sub">Cihazınız dışında ihtiyaç duyduğunuz tüm hizmetler tek adreste.</p>
+        </div>
         <div class="card-grid">
           <div class="card">
-            <div class="icon" aria-hidden="true">📶</div>
+            <span class="icon-chip icon-chip-green"><svg class="ico" aria-hidden="true"><use href="#i-signal"/></svg></span>
             <h3>e-SIM Aktivasyonu</h3>
             <p>Uyumlu cihazlara hızlı ve sorunsuz e-SIM kurulumu yapıyoruz.</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20e-SIM%20aktivasyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20e-SIM%20aktivasyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card">
-            <div class="icon" aria-hidden="true">💳</div>
+            <span class="icon-chip icon-chip-green"><svg class="ico" aria-hidden="true"><use href="#i-sim"/></svg></span>
             <h3>SIM Card</h3>
             <p>Tüm operatörlere uygun SIM kart temini ve hat işlemlerinde yardım.</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20SIM%20kart%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20SIM%20kart%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card">
-            <div class="icon" aria-hidden="true">🌍</div>
-            <h3>Tourist SIM Card & Pack</h3>
+            <span class="icon-chip icon-chip-green"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span>
+            <h3>Tourist SIM Card &amp; Pack</h3>
             <p>Türkiye'ye gelen misafirler için hazır turist SIM paketleri.</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20turist%20SIM%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20turist%20SIM%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card">
-            <div class="icon" aria-hidden="true">🛡️</div>
+            <span class="icon-chip icon-chip-green"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
             <h3>IMEI Kaydı</h3>
             <p>Yurt dışından gelen cihazlarınızın IMEI kayıt işlemlerini takip ediyoruz.</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20IMEI%20kayd%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20IMEI%20kayd%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
           <div class="card">
-            <div class="icon" aria-hidden="true">🔄</div>
+            <span class="icon-chip icon-chip-green"><svg class="ico" aria-hidden="true"><use href="#i-transfer"/></svg></span>
             <h3>Bilgi Aktarımı</h3>
             <p>Eski cihazınızdaki rehber, fotoğraf ve verileri yenisine güvenle taşıyoruz.</p>
-            <a class="btn btn-whatsapp" href="https://wa.me/905377881563?text=Merhaba%2C%20telefon%20bilgi%20aktar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/905377881563?text=Merhaba%2C%20telefon%20bilgi%20aktar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg class="ico ico-sm" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp'tan Sor</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="iletisim">
+    <section class="section" id="iletisim">
       <div class="container">
-        <h2 class="section-title">Müşterilerimiz Ne Diyor?</h2>
-        <p class="section-sub">Avcılar'da yıllardır müşterilerimizin güvenini kazanıyoruz.</p>
+        <div class="section-head">
+          <p class="eyebrow">Referanslar</p>
+          <h2 class="section-title">Müşterilerimiz Ne Diyor?</h2>
+          <p class="section-sub">Avcılar'da yıllardır müşterilerimizin güvenini kazanıyoruz.</p>
+        </div>
         <div class="card-grid">
           <div class="card review-card">
-            <div class="stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
+            <div class="stars" aria-label="5 üzerinden 5 yıldız">
+              <svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
             <blockquote>"Ekranım bir saatte değişti, fiyat da gayet uygundu. Kesinlikle tavsiye ederim."</blockquote>
-            <footer>— Mehmet K.</footer>
+            <div class="review-who">
+              <span class="avatar" aria-hidden="true">MK</span>
+              <div><b>Mehmet K.</b><span>Ekran değişimi</span></div>
+            </div>
           </div>
           <div class="card review-card">
-            <div class="stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
+            <div class="stars" aria-label="5 üzerinden 5 yıldız">
+              <svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
             <blockquote>"Eski telefonumu takas edip cüzi bir fark ile sıfır telefona geçtim. Çok memnun kaldım."</blockquote>
-            <footer>— Ayşe T.</footer>
+            <div class="review-who">
+              <span class="avatar" aria-hidden="true">AT</span>
+              <div><b>Ayşe T.</b><span>Telefon takası</span></div>
+            </div>
           </div>
           <div class="card review-card">
-            <div class="stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
+            <div class="stars" aria-label="5 üzerinden 5 yıldız">
+              <svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico ico-fill" aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
             <blockquote>"Pil değişimi çok hızlı ve garantili yapıldı. İlginiz için teşekkürler."</blockquote>
-            <footer>— Serkan Y.</footer>
+            <div class="review-who">
+              <span class="avatar" aria-hidden="true">SY</span>
+              <div><b>Serkan Y.</b><span>Pil değişimi</span></div>
+            </div>
           </div>
         </div>
-        <div style="margin-top:48px; text-align:center;">
-          <p><strong>Cihangir, Ormanlı Cd. No:46</strong><br>34310 Avcılar/İstanbul</p>
-          <p style="margin: 18px 0;">
-            <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=G%C3%BCner+%C4%B0leti%C5%9Fim+Ormanl%C4%B1+Cd.+No:46+Avc%C4%B1lar+%C4%B0stanbul" target="_blank" rel="noopener">Yol Tarifi Al</a>
-          </p>
-          <iframe class="map-embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Ormanl%C4%B1%20Cd.%20No:46%20Avc%C4%B1lar%20%C4%B0stanbul&amp;output=embed"
-            title="Güner İletişim konum"></iframe>
+
+        <div class="contact-wrap">
+          <div class="contact-card">
+            <div class="contact-line">
+              <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <div><b>Adres</b><p>Cihangir, Ormanlı Cd. No:46<br>34310 Avcılar/İstanbul</p></div>
+            </div>
+            <div class="contact-line">
+              <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-call"/></svg></span>
+              <div><b>Telefon</b><p><a href="tel:+905377881563">0537 788 15 63</a></p></div>
+            </div>
+            <div class="contact-line">
+              <span class="icon-chip"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div><b>Çalışma Saatleri</b><p>Pzt – Cmt: 09.00 – 20.00<br>Pazar: 10.00 – 18.00</p></div>
+            </div>
+            <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=G%C3%BCner+%C4%B0leti%C5%9Fim+Ormanl%C4%B1+Cd.+No:46+Avc%C4%B1lar+%C4%B0stanbul" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Yol Tarifi Al</a>
+          </div>
+          <div class="map-card">
+            <iframe class="map-embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Ormanl%C4%B1%20Cd.%20No:46%20Avc%C4%B1lar%20%C4%B0stanbul&amp;output=embed"
+              title="Güner İletişim konum"></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -298,7 +399,10 @@
     <div class="container">
       <div class="cols">
         <div>
-          <h3>Güner İletişim</h3>
+          <div class="footer-brand">
+            <span class="logo-mark"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <b>Güner İletişim</b>
+          </div>
           <p>Laptop, bilgisayar ve cep telefonu teknik servisi. Sıfır ve 2.el cihaz alım-satım, takas.</p>
         </div>
         <div>
@@ -310,8 +414,8 @@
         <div>
           <h3>İletişim</h3>
           <p>Cihangir, Ormanlı Cd. No:46<br>34310 Avcılar/İstanbul</p>
-          <p><a href="tel:+905377881563">📞 0537 788 15 63</a></p>
-          <p><a href="https://wa.me/905377881563" target="_blank" rel="noopener">💬 WhatsApp</a></p>
+          <p><a class="f-link" href="tel:+905377881563"><svg class="ico" aria-hidden="true"><use href="#i-call"/></svg> 0537 788 15 63</a></p>
+          <p><a class="f-link" href="https://wa.me/905377881563" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp</a></p>
         </div>
         <div>
           <h3>Çalışma Saatleri</h3>
@@ -321,6 +425,6 @@
       <p class="copy">© 2026 Güner İletişim. Tüm hakları saklıdır.</p>
     </div>
   </footer>
-  <a class="float-wa" href="https://wa.me/905377881563" aria-label="WhatsApp ile yazın" target="_blank" rel="noopener">💬</a>
+  <a class="float-wa" href="https://wa.me/905377881563" aria-label="WhatsApp ile yazın" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></a>
 </body>
 </html>
