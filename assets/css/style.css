@@ -85,7 +85,12 @@ input[type="text"] { cursor: text; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 16px; min-height: 72px;
 }
-.logo { display: flex; align-items: center; gap: 11px; font-family: var(--font-head); }
+.logo { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; font-family: var(--font-head); }
+.logo-img { height: 30px; width: auto; display: block; }
+.logo-sub {
+  font-size: .6rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--primary); line-height: 1;
+}
 .logo-mark {
   width: 40px; height: 40px; border-radius: 12px;
   background: var(--grad-primary);
@@ -227,8 +232,7 @@ input[type="text"] { cursor: text; }
     #0B1220;
   display: grid; place-items: center;
 }
-.phone-screen .logo-mark { width: 62px; height: 62px; border-radius: 18px; }
-.phone-screen .logo-mark .ico { width: 32px; height: 32px; }
+.phone-screen .screen-logo { width: 74%; height: auto; }
 .hero-chip {
   position: absolute; display: flex; align-items: center; gap: 9px;
   background: rgba(20, 30, 51, .92); border: 1px solid var(--border-strong);
@@ -447,9 +451,7 @@ a.card:hover .card-more .ico { transform: translateX(4px); }
   font-size: .84rem; color: #64748B;
 }
 .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.footer-brand .logo-mark { width: 34px; height: 34px; border-radius: 10px; }
-.footer-brand .logo-mark .ico { width: 18px; height: 18px; }
-.footer-brand b { color: var(--text); font-family: var(--font-head); }
+.footer-brand .logo-img { height: 34px; }
 
 /* ===== Floating WhatsApp ===== */
 .float-wa {
