@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t bg-muted">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src="/logo-full-dark.png" alt="Güner İletişim" width={155} height={32} className="h-8 w-auto" />
+          <Image src="/logo-dark.png" alt="Güner İletişim" width={72} height={32} className="h-8 w-auto" />
           <p className="mt-4 text-sm text-muted-foreground">
             Laptop, bilgisayar ve cep telefonu teknik servisi. Sıfır ve 2.el cihaz alım-satım, takas.
           </p>
