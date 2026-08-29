@@ -45,27 +45,18 @@ export function Footer() {
       <div className="border-t">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-1 px-5 py-6 text-center text-xs text-muted-foreground">
           <p>© 2026 Güner İletişim. Tüm hakları saklıdır.</p>
-          <a
-            href="https://linerasoft.com/tr"
-            target="_blank"
-            rel="noopener"
-            className="group flex items-center gap-2"
-          >
-            <Image
-              src="/linerasoft.png"
-              alt="LineraSoft logosu"
-              width={18}
-              height={20}
-              className="h-5 w-auto opacity-80 transition-opacity group-hover:opacity-100"
-            />
-            <span>
-              Bu site ve tüm hakları{" "}
-              <span className="font-semibold text-foreground underline-offset-2 group-hover:text-primary group-hover:underline">
-                LineraSoft
-              </span>
-              &apos;a aittir.
-            </span>
-          </a>
+          <p>
+            Bu site ve tüm hakları{" "}
+            <a
+              href="https://linerasoft.com/tr"
+              target="_blank"
+              rel="noopener"
+              className="font-semibold text-foreground underline-offset-2 hover:text-primary hover:underline"
+            >
+              LineraSoft
+            </a>
+            &apos;a aittir.
+          </p>
         </div>
       </div>
     </footer>
