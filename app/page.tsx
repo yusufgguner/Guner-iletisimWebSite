@@ -46,6 +46,31 @@ const SIM_SERVICES = [
   { icon: RefreshCw, title: "Bilgi Aktarımı", desc: "Eski cihazınızdaki rehber, fotoğraf ve verileri yenisine güvenle taşıyoruz.", waText: "Merhaba, telefon bilgi aktarımı hakkında bilgi almak istiyorum." },
 ];
 
+const CHECKS = [
+  { icon: "smartphone", title: "Ekran & dokunmatik testi", desc: "Panel, renk ve dokunmatik hassasiyeti tek tek kontrol edilir." },
+  { icon: "battery", title: "Batarya sağlığı ölçümü", desc: "Pil sağlığı ölçülür; düşük çıkan piller satış öncesi yenilenir." },
+  { icon: "volume", title: "Kamera & ses kontrolü", desc: "Kameralar, hoparlör ve mikrofonlar gerçek kullanımda denenir." },
+  { icon: "shield", title: "IMEI & kayıt sorgusu", desc: "IMEI temizliği ve kayıt durumu satıştan önce doğrulanır." },
+];
+
+const FAQS = [
+  { q: "2.el cihazlar garantili mi?", a: "Evet. Sattığımız her 2.el cihaz mağaza garantilidir; garanti süresi cihaza göre satış sırasında net olarak belirtilir." },
+  { q: "Takasta fiyat nasıl belirleniyor?", a: "Cihazınız gözünüzün önünde test edilir; ekran, batarya ve gövde durumuna göre güncel piyasa değeri üzerinden net teklif verilir." },
+  { q: "Ekran değişimi ne kadar sürer?", a: "Çoğu modelde 1-2 saat içinde, aynı gün teslim edilir. Yoğunluğa göre kesin süreyi işlem öncesinde söyleriz." },
+  { q: "Tamirde cihazımdaki veriler güvende mi?", a: "Evet. Verilerinize dokunulmaz; dilerseniz işlem öncesi yedekleme ve yeni cihaza aktarım hizmeti de veriyoruz." },
+  { q: "Ödeme seçenekleri neler?", a: "Mağazamızda nakit ve kredi kartı ile ödeme yapabilirsiniz. Takasta fark ödemesi için de aynı seçenekler geçerlidir." },
+];
+
+const FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const REVIEWS = [
   { initials: "MK", name: "Mehmet K.", tag: "Ekran değişimi", text: "Ekranım bir saatte değişti, fiyat da gayet uygundu. Kesinlikle tavsiye ederim." },
   { initials: "AT", name: "Ayşe T.", tag: "Telefon takası", text: "Eski telefonumu takas edip cüzi bir fark ile sıfır telefona geçtim. Çok memnun kaldım." },
@@ -57,6 +82,7 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }} />
 
       {/* Hero */}
       <section className="border-b bg-muted">
@@ -224,8 +250,102 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 2.el test & garanti süreci */}
+      <section className="border-t bg-muted py-20">
+        <div className="mx-auto max-w-6xl px-5">
+          <SectionHead
+            title="Her 2.el cihaz satışa çıkmadan test edilir"
+            sub="Vitrindeki hiçbir cihaz kontrolsüz satılmaz. Dört aşamalı testten geçmeyen cihaz rafa çıkmaz."
+          />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {CHECKS.map((c, i) => (
+              <Reveal key={c.title} delay={(i % 4) * 0.06}>
+                <Card className="h-full">
+                  <CardContent className="p-6">
+                    <span className="mb-4 grid size-11 place-items-center rounded-xl bg-accent text-accent-foreground">
+                      <ServiceIcon name={c.icon} className="size-5" />
+                    </span>
+                    <h3 className="text-sm font-bold">{c.title}</h3>
+                    <p className="mt-1.5 text-sm text-muted-foreground">{c.desc}</p>
+                  </CardContent>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-8 flex items-center justify-center gap-2 text-sm font-semibold">
+            <BadgeCheck className="size-4 text-emerald-600" />
+            Tüm 2.el cihazlar mağaza garantisi ile satılır.
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Hakkımızda */}
+      <section className="py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 lg:grid-cols-2">
+          <Reveal>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-[2.1rem]">
+              Avcılar&apos;da 10 yılı aşkın süredir aynı yerdeyiz
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Güner İletişim, Cihangir Ormanlı Caddesi&apos;ndeki mağazasında telefon, tablet ve
+              bilgisayar teknik servisi ile sıfır ve 2.el cihaz alım-satımı yapar. İşimizin özü
+              basit: önce cihaza bakarız, net fiyatı söyleriz, sözümüzün arkasında dururuz.
+            </p>
+            <p className="mt-3 text-muted-foreground">
+              Komşularımızın yıllardır bize gelmesinin sebebi kampanya değil; işini bilen usta,
+              yerinde fiyat ve teslim ettiğimiz işin arkasında durmamızdır.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Card>
+              <CardContent className="grid gap-5 p-7">
+                {[
+                  { icon: MapPin, t: "Mağazadan hizmet", d: "Bütün işlemler mağazamızda, gözünüzün önünde yapılır." },
+                  { icon: Clock, t: "Haftanın 7 günü açık", d: "Pzt–Cmt 09.00–20.00, Pazar 10.00–18.00." },
+                  { icon: ShieldCheck, t: "Garantili işçilik", d: "Onarım ve 2.el satışlarda mağaza garantisi." },
+                ].map((r) => (
+                  <div key={r.t} className="flex gap-4">
+                    <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-accent text-accent-foreground">
+                      <r.icon className="size-5" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold">{r.t}</p>
+                      <p className="text-sm text-muted-foreground">{r.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* SSS */}
+      <section id="sss" className="border-t bg-muted py-20">
+        <div className="mx-auto max-w-3xl px-5">
+          <SectionHead
+            title="Sık Sorulan Sorular"
+            sub="Aklınıza takılan başka bir şey varsa WhatsApp'tan sorabilirsiniz."
+          />
+          <div className="space-y-3">
+            {FAQS.map((f) => (
+              <details
+                key={f.q}
+                className="group rounded-xl border bg-card px-5 py-4 shadow-[0_1px_2px_rgba(28,25,23,0.05)] open:pb-5"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-bold [&::-webkit-details-marker]:hidden">
+                  {f.q}
+                  <ArrowRight className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90" />
+                </summary>
+                <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Reviews + contact */}
-      <section id="iletisim" className="border-t bg-muted py-20">
+      <section id="iletisim" className="border-t py-20">
         <div className="mx-auto max-w-6xl px-5">
           <SectionHead
             eyebrow="Referanslar"

@@ -21,6 +21,8 @@ export function Footer() {
             <li><Link className="hover:text-primary" href="/teknik-servis/">Teknik Servis</Link></li>
             <li><Link className="hover:text-primary" href="/takas/">Telefon Takası</Link></li>
             <li><Link className="hover:text-primary" href="/urunler/">Ürünler</Link></li>
+            <li><Link className="hover:text-primary" href="/#sss">Sık Sorulan Sorular</Link></li>
+            <li><Link className="hover:text-primary" href="/kvkk/">KVKK &amp; Gizlilik</Link></li>
           </ul>
         </div>
         <div>
