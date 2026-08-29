@@ -1,9 +1,19 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { ContactShadows, Float, RoundedBox } from "@react-three/drei";
-import { useRef } from "react";
+import { ContactShadows, Float, RoundedBox, useTexture } from "@react-three/drei";
+import { Suspense, useRef } from "react";
 import type { Group } from "three";
+
+function ScreenLogo() {
+  const logo = useTexture("/logo-light.png");
+  return (
+    <mesh position={[0, 0.12, 0.1]}>
+      <planeGeometry args={[1.02, 0.46]} />
+      <meshBasicMaterial map={logo} transparent />
+    </mesh>
+  );
+}
 
 function Phone() {
   const group = useRef<Group>(null);
@@ -25,18 +35,17 @@ function Phone() {
       <RoundedBox args={[1.38, 2.98, 0.02]} radius={0.07} smoothness={6} position={[0, 0, 0.085]}>
         <meshStandardMaterial color="#16181d" metalness={0.1} roughness={0.25} />
       </RoundedBox>
-      {/* screen glow accents */}
-      <mesh position={[0, 0.55, 0.1]}>
-        <circleGeometry args={[0.16, 48]} />
-        <meshBasicMaterial color="#ea580c" />
+      {/* branded screen content */}
+      <Suspense fallback={null}>
+        <ScreenLogo />
+      </Suspense>
+      <mesh position={[0, -0.42, 0.1]}>
+        <planeGeometry args={[0.7, 0.04]} />
+        <meshBasicMaterial color="#2c2f36" />
       </mesh>
-      <mesh position={[0, 0.05, 0.1]}>
-        <planeGeometry args={[0.9, 0.045]} />
-        <meshBasicMaterial color="#3f3f46" />
-      </mesh>
-      <mesh position={[0, -0.12, 0.1]}>
-        <planeGeometry args={[0.62, 0.045]} />
-        <meshBasicMaterial color="#3f3f46" />
+      <mesh position={[0, -0.56, 0.1]}>
+        <planeGeometry args={[0.46, 0.04]} />
+        <meshBasicMaterial color="#2c2f36" />
       </mesh>
       {/* camera island */}
       <RoundedBox args={[0.52, 0.52, 0.05]} radius={0.12} smoothness={4} position={[-0.4, 1.15, -0.1]}>

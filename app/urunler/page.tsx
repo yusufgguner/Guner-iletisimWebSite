@@ -16,10 +16,7 @@ export default function Urunler() {
     <>
       <section className="border-b bg-muted py-14 text-center">
         <div className="mx-auto max-w-3xl px-5">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Vitrin</p>
-          <h1 className="text-4xl font-extrabold tracking-tight">
-            Sıfır ve 2.El <span className="text-primary">Cihazlar</span>
-          </h1>
+          <h1 className="text-4xl font-bold tracking-tight">Sıfır ve 2.el cihazlar</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Tüm cihazlar test edilmiş ve garantilidir. Fiyat sormak için WhatsApp yeterli.
           </p>
@@ -43,12 +40,12 @@ export default function Urunler() {
                 alabilirsiniz. Takılması bizden, hediye.
               </p>
               <div className="mt-7 flex flex-wrap justify-center gap-3">
-                <Button asChild size="lg" className="rounded-full">
+                <Button asChild size="lg">
                   <a href={MAPS_DIR} target="_blank" rel="noopener">
                     <MapPin data-slot="icon" /> Yol Tarifi Al
                   </a>
                 </Button>
-                <Button asChild size="lg" className="rounded-full bg-wa text-wa-foreground hover:bg-wa/90">
+                <Button asChild size="lg" className="bg-wa text-wa-foreground hover:bg-wa/90">
                   <a href={wa("Merhaba, aksesuar stok durumu hakkında bilgi almak istiyorum.")} target="_blank" rel="noopener">
                     <MessageCircle data-slot="icon" /> WhatsApp&apos;tan Stok Sor
                   </a>

@@ -23,29 +23,28 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b bg-white/85 backdrop-blur-md">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5">
-        <Link href="/" className="flex flex-col gap-1" aria-label="Güner İletişim ana sayfa">
-          <Image src="/logo-dark.png" alt="Güner" width={101} height={45} priority className="h-7 w-auto" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary leading-none">
-            Telefon &amp; Aksesuarları · Avcılar
-          </span>
+        <Link href="/" className="flex items-baseline gap-2.5" aria-label="Güner İletişim ana sayfa">
+          <Image src="/logo-dark.png" alt="Güner" width={112} height={50} priority className="h-8 w-auto" />
+          <span className="hidden text-sm text-muted-foreground sm:inline">Avcılar</span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground",
-                pathname === l.href.replace("/#iletisim", "/") && l.href !== "/#iletisim" && "text-primary"
+                "text-[15px] font-semibold text-muted-foreground transition-colors hover:text-foreground",
+                pathname === l.href.replace("/#iletisim", "/") && l.href !== "/#iletisim" &&
+                  "text-foreground underline decoration-primary decoration-2 underline-offset-8"
               )}
             >
               {l.label}
             </Link>
           ))}
-          <Button asChild size="sm" className="ml-3 rounded-full">
+          <Button asChild size="sm" variant="outline" className="ml-2">
             <a href={PHONE_TEL}>
-              <Phone data-slot="icon" /> Hemen Ara
+              <Phone data-slot="icon" /> 0537 788 15 63
             </a>
           </Button>
         </nav>
@@ -72,9 +71,9 @@ export function Header() {
               {l.label}
             </Link>
           ))}
-          <Button asChild className="mt-2 w-full rounded-full">
+          <Button asChild className="mt-2 w-full">
             <a href={PHONE_TEL}>
-              <Phone data-slot="icon" /> Hemen Ara
+              <Phone data-slot="icon" /> 0537 788 15 63
             </a>
           </Button>
         </nav>

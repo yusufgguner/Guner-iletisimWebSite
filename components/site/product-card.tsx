@@ -51,7 +51,7 @@ export function ProductCard({ product }: { product: Product }) {
         <Button
           asChild
           size="sm"
-          className="mt-auto rounded-full bg-wa text-wa-foreground hover:bg-wa/90"
+          className="mt-auto bg-wa text-wa-foreground hover:bg-wa/90"
         >
           <a href={wa(product.waText)} target="_blank" rel="noopener">
             <MessageCircle data-slot="icon" /> {product.cat === "aksesuar" ? "Stok Sor" : "WhatsApp'tan Sor"}

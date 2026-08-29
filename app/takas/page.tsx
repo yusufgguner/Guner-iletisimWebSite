@@ -31,14 +31,11 @@ export default function Takas() {
     <>
       <section className="border-b bg-muted py-14 text-center">
         <div className="mx-auto max-w-3xl px-5">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Takas Programı</p>
-          <h1 className="text-4xl font-extrabold tracking-tight">
-            Eskini Getir, <span className="text-primary">Yenisini Götür</span>
-          </h1>
+          <h1 className="text-4xl font-bold tracking-tight">Eskini getir, yenisini götür</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Eski cihazın değerinde sayılır, aradaki farkı ödersin. Bu kadar basit.
           </p>
-          <Button asChild size="lg" className="mt-7 rounded-full bg-wa text-wa-foreground hover:bg-wa/90">
+          <Button asChild size="lg" className="mt-7 bg-wa text-wa-foreground hover:bg-wa/90">
             <a href={wa("Merhaba, telefon takası hakkında bilgi almak istiyorum.")} target="_blank" rel="noopener">
               <MessageCircle data-slot="icon" /> WhatsApp&apos;tan Yaz
             </a>
@@ -103,7 +100,7 @@ export default function Takas() {
                 <h2 className="text-2xl font-extrabold sm:text-3xl">Yerinde görmek daha kolay.</h2>
                 <p className="mt-2 text-background/70">Cihazını getir, 10 dakikada net teklifini al.</p>
               </div>
-              <Button asChild size="lg" className="rounded-full">
+              <Button asChild size="lg">
                 <a href={MAPS_DIR} target="_blank" rel="noopener">
                   <MapPin data-slot="icon" /> Yol Tarifi Al
                 </a>

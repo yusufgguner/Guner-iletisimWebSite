@@ -62,29 +62,38 @@ export default function Home() {
       <section className="border-b bg-muted">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 md:grid-cols-2 md:py-20">
           <Reveal>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-primary">Avcılar · Cihangir</p>
-            <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-              Avcılar&apos;ın Telefon ve <span className="text-primary">Teknik Servis</span> Merkezi
+            <h1 className="text-4xl font-bold leading-[1.15] tracking-tight sm:text-[3.25rem]">
+              Avcılar&apos;ın telefon ve teknik servis merkezi
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
               Ekran değişimi, pil, şarj portu, su hasarı onarımı; sıfır ve 2.el cihaz alım-satım, takas.
               Uygun fiyat, hızlı teslim, garantili işçilik.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="rounded-full bg-wa text-wa-foreground hover:bg-wa/90">
+              <Button asChild size="lg" className="bg-wa text-wa-foreground hover:bg-wa/90">
                 <a href={wa("Merhaba, bilgi almak istiyorum.")} target="_blank" rel="noopener">
                   <MessageCircle data-slot="icon" /> WhatsApp&apos;tan Yaz
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full">
+              <Button asChild size="lg" variant="outline">
                 <a href={PHONE_TEL}>
                   <Phone data-slot="icon" /> {PHONE_DISPLAY}
                 </a>
               </Button>
             </div>
-            <p className="mt-6 flex items-center gap-2 text-sm font-semibold text-muted-foreground">
-              <MapPin className="size-4 text-primary" /> {ADDRESS_1} — Avcılar/İstanbul
-            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1.5">
+                <span className="flex text-amber-500">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="size-3.5 fill-current" />
+                  ))}
+                </span>
+                Müşteri memnuniyeti
+              </span>
+              <span className="flex items-center gap-1.5">
+                <MapPin className="size-4" /> {ADDRESS_1}, Avcılar
+              </span>
+            </div>
           </Reveal>
           <Hero3D />
         </div>
@@ -99,13 +108,13 @@ export default function Home() {
             { n: 1500, label: "Mutlu Müşteri" },
           ].map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08} className="text-center">
-              <p className="text-3xl font-extrabold text-primary"><CountUp to={s.n} /></p>
-              <p className="text-sm font-semibold text-muted-foreground">{s.label}</p>
+              <p className="text-3xl font-bold"><CountUp to={s.n} /></p>
+              <p className="mt-0.5 text-sm text-muted-foreground">{s.label}</p>
             </Reveal>
           ))}
           <Reveal delay={0.24} className="text-center">
-            <p className="text-3xl font-extrabold">Aynı Gün</p>
-            <p className="text-sm font-semibold text-muted-foreground">Teslimat</p>
+            <p className="text-3xl font-bold">Aynı gün</p>
+            <p className="mt-0.5 text-sm text-muted-foreground">Teslimat</p>
           </Reveal>
         </div>
       </section>
@@ -129,9 +138,6 @@ export default function Home() {
                       </span>
                       <h3 className="font-bold">{s.title}</h3>
                       <p className="mt-1.5 text-sm text-muted-foreground">{s.desc}</p>
-                      <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary">
-                        İncele <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -152,7 +158,7 @@ export default function Home() {
                   Eski telefonun ne durumda olursa olsun değerinde alalım, yenisine sayalım.
                 </p>
               </div>
-              <Button asChild size="lg" className="rounded-full">
+              <Button asChild size="lg">
                 <Link href="/takas/">
                   Takas Teklifi Al <ArrowRight data-slot="icon" />
                 </Link>
@@ -178,7 +184,7 @@ export default function Home() {
             ))}
           </div>
           <Reveal className="mt-10 text-center">
-            <Button asChild size="lg" className="rounded-full">
+            <Button asChild size="lg">
               <Link href="/urunler/">
                 Tüm Ürünleri Gör <ArrowRight data-slot="icon" />
               </Link>
@@ -205,7 +211,7 @@ export default function Home() {
                     </span>
                     <h3 className="font-bold">{s.title}</h3>
                     <p className="mb-4 mt-1.5 text-sm text-muted-foreground">{s.desc}</p>
-                    <Button asChild size="sm" variant="outline" className="mt-auto rounded-full">
+                    <Button asChild size="sm" variant="outline" className="mt-auto">
                       <a href={wa(s.waText)} target="_blank" rel="noopener">
                         <MessageCircle data-slot="icon" /> WhatsApp&apos;tan Sor
                       </a>
@@ -273,7 +279,7 @@ export default function Home() {
                       </div>
                     </div>
                   ))}
-                  <Button asChild className="mt-auto rounded-full">
+                  <Button asChild className="mt-auto">
                     <a href={MAPS_DIR} target="_blank" rel="noopener">
                       <MapPin data-slot="icon" /> Yol Tarifi Al
                     </a>

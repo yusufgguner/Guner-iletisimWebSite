@@ -106,7 +106,7 @@ export function Wizard({
               </div>
             )
           )}
-          <Button type="submit" className="w-full rounded-full bg-wa text-wa-foreground hover:bg-wa/90">
+          <Button type="submit" className="w-full bg-wa text-wa-foreground hover:bg-wa/90">
             <MessageCircle data-slot="icon" /> {buttonLabel}
           </Button>
           <p className="text-center text-xs text-muted-foreground">

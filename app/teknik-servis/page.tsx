@@ -19,8 +19,7 @@ export default function TeknikServis() {
     <>
       <section className="border-b bg-muted py-14 text-center">
         <div className="mx-auto max-w-3xl px-5">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Ücretsiz Arıza Tespiti</p>
-          <h1 className="text-4xl font-extrabold tracking-tight">Teknik Servis</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Teknik Servis</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Önce bakalım, sonra konuşalım. Tespit ücretsiz, fiyat net, işçilik garantili.
           </p>
@@ -39,10 +38,10 @@ export default function TeknikServis() {
                   <div className="flex-1">
                     <h2 className="text-lg font-bold">{s.title}</h2>
                     <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
-                    <p className="mt-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-emerald-700">
+                    <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
                       <Clock className="size-3.5" /> Süre: {s.time}
                     </p>
-                    <Button asChild size="sm" className="mt-4 rounded-full bg-wa text-wa-foreground hover:bg-wa/90">
+                    <Button asChild size="sm" className="mt-4 bg-wa text-wa-foreground hover:bg-wa/90">
                       <a href={wa(s.waText)} target="_blank" rel="noopener">
                         <MessageCircle data-slot="icon" /> Fiyat Sor
                       </a>
