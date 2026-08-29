@@ -48,11 +48,8 @@ export function Header() {
       {/* Ana bar */}
       <div className="border-b bg-white shadow-[0_1px_3px_rgba(28,25,23,0.05)]">
         <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between gap-4 px-5">
-          <Link href="/" className="flex items-baseline gap-1.5" aria-label="Güner İletişim ana sayfa">
-            <Image src="/logo-dark.png" alt="Güner" width={129} height={58} priority className="h-9 w-auto self-center" />
-            <span className="font-heading text-[26px] font-bold leading-none tracking-tight text-foreground">
-              iletişim
-            </span>
+          <Link href="/" aria-label="Güner İletişim ana sayfa">
+            <Image src="/logo-full-dark.png" alt="Güner İletişim" width={194} height={40} priority className="h-9 w-auto sm:h-10" />
           </Link>
 
           <nav className="hidden items-center gap-7 md:flex">
