@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Güner İletişim — Web Sitesi
 
-## Getting Started
+Avcılar/İstanbul'daki **Güner İletişim** (telefon & bilgisayar teknik servisi, sıfır ve 2.el cihaz alım-satım, takas) için hazırlanmış tanıtım ve müşteri kazanım sitesi.
 
-First, run the development server:
+Site tamamen statiktir: veritabanı, üyelik ve ödeme yoktur. Tüm formlar ve butonlar müşteriyi hazır mesajla **WhatsApp'a (0537 788 15 63)** yönlendirir.
+
+## Teknolojiler
+
+- [Next.js](https://nextjs.org) (App Router, statik export) + TypeScript
+- Tailwind CSS + [shadcn/ui](https://ui.shadcn.com) bileşenleri
+- Framer Motion (kaydırma animasyonları, sayaçlar)
+- three.js / react-three-fiber (ana sayfadaki 3D telefon)
+- lucide-react ikonları
+
+## Sayfalar
+
+| Yol | İçerik |
+|---|---|
+| `/` | Ana sayfa: hero, istatistikler, hizmetler, takas çağrısı, öne çıkan ürünler, SIM hizmetleri, 2.el test süreci, hakkımızda, SSS, yorumlar + harita |
+| `/teknik-servis` | 11 onarım hizmeti + WhatsApp fiyat sihirbazı |
+| `/takas` | Eskiyi getir yenisini götür: 3 adım, avantajlar, teklif sihirbazı |
+| `/urunler` | Filtreli vitrin (Sıfır / 2.El / Aksesuar) + mağaza daveti |
+| `/kvkk` | KVKK aydınlatma metni ve gizlilik |
+
+Ayrıca: özel 404 sayfası, `sitemap.xml`, `robots.txt`, LocalBusiness + FAQ JSON-LD şemaları.
+
+## Geliştirme
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Site http://localhost:3000 adresinde açılır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Yayına Alma
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Çıktı `out/` klasörüne yazılır. Bu klasörü herhangi bir statik hostinge (Vercel, Netlify, cPanel vb.) yüklemek yeterlidir.
 
-To learn more about Next.js, take a look at the following resources:
+Alan adı alındığında güncellenmesi gerekenler:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/sitemap.ts` ve `app/robots.ts` içindeki `guneriletisim.example` adresi
+- `app/page.tsx` içindeki JSON-LD `url` alanı
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## İçerik Güncelleme
 
-## Deploy on Vercel
+- **Ürünler ve fiyatlar:** `lib/site.ts` → `PRODUCTS` dizisi. Gerçek ürün fotoğrafı eklemek için görseli `public/products/` içine koyup ilgili ürünün `image` alanına yolunu yazın; fotoğrafı olmayan ürünler otomatik illüstrasyonla gösterilir.
+- **Hizmetler:** `lib/site.ts` → `SERVICES` dizisi.
+- **Telefon, adres, çalışma saatleri:** `lib/site.ts` üst kısmındaki sabitler.
+- **Ürün görselleri lisansları:** `public/products/CREDITS.md`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Dosya Yapısı
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/               Sayfalar (App Router)
+components/site/   Siteye özel bileşenler (header, footer, kartlar, sihirbazlar, 3D hero)
+components/ui/     shadcn/ui bileşenleri
+lib/site.ts        Tüm içerik ve iletişim sabitleri
+public/            Logo, ürün görselleri
+assets/src/        Orijinal logo kaynağı
+```
+
+---
+
+Bu site ve tüm hakları [LineraSoft](https://linerasoft.com/tr)'a aittir.
