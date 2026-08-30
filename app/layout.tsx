@@ -33,6 +33,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="tr">
       <body className={`${rubik.variable} ${nunito.variable} font-sans`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'console.log("%c\\u26A0 DUR!","color:#ea580c;font-size:28px;font-weight:bold");' +
+              'console.log("%cBu sitenin t\\u00FCm haklar\\u0131 LineraSoft\\u0027a aittir, izinsiz kopyalanamaz.","font-size:14px;font-weight:bold");' +
+              'console.log("%chttps://linerasoft.com/tr","font-size:12px");',
+          }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />
